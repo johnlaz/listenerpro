@@ -12,10 +12,10 @@
 <meta name="theme-color" content="#00aaff">
 <meta name="description" content="Real-time AI conversational support tool">
 
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192x192.png">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
 
 <title>Listener Pro</title>
 <style>
@@ -989,7 +989,7 @@ init();
 // Register service worker for PWA
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
       .then(() => console.log('SW registered'))
       .catch(e => console.log('SW failed:', e));
   });
